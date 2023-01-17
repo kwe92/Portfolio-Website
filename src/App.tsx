@@ -6,9 +6,9 @@ interface Props{
 
 const App = (props:Props) => {
     return (
-            <div>
+            <h1>
                 My App
-            </div>
+            </h1>
     );
 };
 
