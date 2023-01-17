@@ -1,4 +1,13 @@
-import React from "react";
+import React, { ReactElement } from "react";
+import Navbar from "./components/Navbar/Navbar";
+import { ThemeProvider } from "styled-components";
+import AppWrapper from "./AppStyles";
+
+import { About, Footer, Header, Skills, Testimonial, Work } from "./container";
+
+import appTheme from "./theme/Theme";
+
+
 
 interface Props{
 
@@ -6,9 +15,23 @@ interface Props{
 
 const App = (props:Props) => {
     return (
-            <h1>
-                My App
-            </h1>
+      <ThemeProvider theme={appTheme}>
+
+         <AppWrapper>
+
+            <Navbar/>
+            <Header />
+            <About />
+            <Work />
+            <Skills />
+            <Testimonial />
+            <Footer />
+
+          </AppWrapper>
+
+      </ThemeProvider>
+         
+          
     );
 };
 
