@@ -14,3 +14,5 @@ const Column: GenStyledComponent<"div", {}> = styled.div`
     flex-direction: column;
 
 `;
+
+export { Row, Column }
