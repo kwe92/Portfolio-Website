@@ -2,12 +2,8 @@ import React, { ReactElement } from "react";
 import Navbar from "./components/Navbar/Navbar";
 import { ThemeProvider } from "styled-components";
 import AppWrapper from "./AppStyles";
-
 import { About, Footer, Header, Skills, Testimonial, Work } from "./container";
-
 import appTheme from "./theme/Theme";
-
-
 
 interface Props{
 
@@ -20,12 +16,12 @@ const App = (props:Props) => {
          <AppWrapper>
 
             <Navbar/>
-            <Header />
+            {/* <Header />
             <About />
             <Work />
             <Skills />
             <Testimonial />
-            <Footer />
+            <Footer /> */}
 
           </AppWrapper>
 
