@@ -1,41 +1,25 @@
 import styled from "styled-components";
-
-export interface Theme {
-    
-    fontBase: string,
-
-    primaryColor: string,
-
-    secondaryColor: string,
-
-    blackColor: string,
-
-    lightgreyColor: string,
-
-    greyColor: string,
-
-    brownColor: string,
-
-    whiteColor: string
-}
+import { Theme } from "../interfaces/ThemeInterface";
 
 const appTheme: Theme = {
 
-    fontBase: "Roboto",
+      fontBase: "Roboto"
 
-    primaryColor: "#edf2f8",
+    , primaryColor: "#edf2f8"
+    // , primaryColor: "lightblue"
 
-    secondaryColor: "#313bac",
+    , secondaryColor: "#313bac"
 
-    blackColor: "#030303",
+    , blackColor: "#030303"
 
-    lightgreyColor: "#e4e4e4",
+    , lightgreyColor: "#e4e4e4"
 
-    greyColor: "#6b7688",
+    , greyColor: "#6b7688"
 
-    brownColor: "#46364a",
+    , brownColor: "#46364a"
 
-    whiteColor: "#ffffff"
+    , whiteColor: "#ffffff"
+  
 }
 
 export default appTheme;
