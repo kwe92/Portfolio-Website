@@ -4,7 +4,7 @@ export interface Theme {
 
   , primaryColor: string
 
-  , secondaryColor: string
+  , secondaryColor: (alpha?: number) => string
 
   , blackColor: string
 
