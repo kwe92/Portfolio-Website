@@ -16,12 +16,12 @@ const App = (props:Props) => {
          <AppWrapper>
 
             <Navbar/>
-            <Header />
+            {/* <Header />
             <About />
             <Work />
             <Skills />
             <Testimonial />
-            <Footer />
+            <Footer /> */}
 
           </AppWrapper>
 
