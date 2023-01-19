@@ -22,6 +22,15 @@ const AppGlobalTheme: GlobalStyleComponent<{}, DefaultTheme> = createGlobalStyle
         list-style: none;
     }
 
+    a{
+        text-decoration: none;
+
+        // color: rgba(255,255,255,1);
+        
+        color: rgba(0,0,0,1);
+
+    }
+
 `;
 
 export default AppGlobalTheme;
