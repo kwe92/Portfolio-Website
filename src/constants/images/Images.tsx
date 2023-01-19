@@ -1,5 +1,6 @@
 import email from '../../assets/email.png';
 import mobile from '../../assets/mobile.png';
+import mobileMenu from '../../assets/mobileMenuBackground.jpeg';
 import api from '../../assets/api.png';
 import cpp from '../../assets/cpp.png';
 import css from '../../assets/css.png';
@@ -68,4 +69,5 @@ export default {
   nb,
   skype,
   spotify,
+  mobileMenu,
 };
