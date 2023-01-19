@@ -4,11 +4,11 @@ import { Theme } from "../interfaces/ThemeInterface";
 const appTheme: Theme = {
 
       fontBase: "Roboto"
-
-    , primaryColor: "#edf2f8"
     // , primaryColor: "lightblue"
+    , primaryColor: "#edf2f8"
 
-    , secondaryColor: "#313bac"
+    // , secondaryColor: "#313bac"
+    , secondaryColor: (alpha = 1) => (`rgba(21, 125, 191, ${alpha})`)
 
     , blackColor: "#030303"
 
