@@ -15,9 +15,8 @@ const ContainerNavbar = styled.nav`
 
     padding: 1rem 2rem;
 
-    // background: rgba(255, 255, 255, 0.25);
-
-    background: rgba(255, 145, 101, 0.25);
+    // TODO: Figure out a good navbar color
+    background: rgba(0, 0, 0, 0.05);
 
     backdrop-filter: blur(0.25rem);
 
@@ -59,22 +58,11 @@ const NavLinkUL = styled.ul`
 
     justify-content: center;
 
-`;
+    @media screen and (max-width: 900px){
 
-const NavLinkListItemWrapper = styled.li`
+        display: none;
 
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: center;
-
-    justify-content: center;
-
-    margin: 0rem 0.75rem;
-
-    cursor: pointer;
-
+    }
 `;
 
 const NavLinkListItemDot = styled.div`
@@ -83,7 +71,7 @@ const NavLinkListItemDot = styled.div`
 
     height: 0.3125rem;
 
-    background: blue;
+    background: transparent;
 
     margin-bottom: 0.3125rem;
 
@@ -102,11 +90,34 @@ const NavLinkListItem = styled.a`
     font-weight: 500;
 
     transition: all 0.3125s ease-in-out;
+    
+    color: ${({ theme }) => (theme.greyColor)};
 
     &: hover{
-        color: orange;
+        color: ${({ theme }) => (theme.secondaryColor())};
     }
 
+`;
+
+const NavLinkListItemWrapper = styled.li`
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin: 0rem 0.625rem;
+
+    cursor: pointer;
+
+    &: hover{
+        ${NavLinkListItemDot}{
+            background: ${({theme}) => (theme.secondaryColor(0.75))};
+        }
+    }
 
 `;
 
