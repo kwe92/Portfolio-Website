@@ -16,4 +16,6 @@ export interface Theme {
 
   , whiteColor: string
 
-}
+  , navbarHeight: string
+
+};
