@@ -1,3 +1,3 @@
 # Portfolio Website
 
-TypeScript | Sanity | Farmer Motion
+TypeScript | Sanity | Framer Motion
