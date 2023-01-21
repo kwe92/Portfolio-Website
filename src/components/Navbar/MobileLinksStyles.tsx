@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { NavLinkListItem } from "./NavbarStyles";
 import { images } from "../../constants/images";
 
+
 const secondaryColor = ( { theme }: {theme: Theme} ) => (theme.secondaryColor(1));
 
 const NavbarMobileMenu = styled(Row)`
@@ -66,16 +67,13 @@ const FramerDiv = styled(motion.div)`
 
     // TODO: Figure out best width you like
 
-    width: 40%;
+    width: 60%;
 
     height: 100vh;
 
     background-image: url(${images.mobileMenu});
 
     background-size: cover;
-
-    // TODO: Maybe remove
-    // background-repeat: repeat;
 
     padding: 1rem;
 
@@ -85,6 +83,10 @@ const FramerDiv = styled(motion.div)`
 
     @media screen and (min-width:900px){
         display: none;
+    }
+
+    @media screen and (max-width:450px){
+        width: 100vw;
     }
     
 `;
