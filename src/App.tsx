@@ -19,8 +19,8 @@ const App = (props:Props) => {
             <Navbar/>
             <Wrapper>
               <Header />
-              {/* <About />
-              <Work />
+              <About />
+              {/* <Work />
               <Skills />
               <Testimonial />
               <Footer />  */}

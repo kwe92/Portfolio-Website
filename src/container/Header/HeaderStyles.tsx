@@ -12,13 +12,12 @@ const HeaderContainer = styled(Row)`
     // TODO: Maybe should be viewport
     width: 100%;
 
+    // TODO: Maybe 100% ?
     height: 100%;
 
     position: relative;
 
     background: url(${images.bgImg});
-
-    // background: green;
 
     background-size: cover;
 
