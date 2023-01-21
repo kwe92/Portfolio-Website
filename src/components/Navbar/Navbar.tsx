@@ -78,6 +78,7 @@ const transition = { duration:0.85, ease: "easeOut" };
 
 const MotionDiv = (props:{ children: any }) => (
     <FramerDiv
+    // TODO: whileInView on devices with a smaller width than 300px | Small case, can figure it out later
     whileInView={{ x: [300, 0] }}
     transition={transition}
     >

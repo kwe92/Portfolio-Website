@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Row } from "../../constants/layout/Flex";
+import { Theme } from "../../interfaces/ThemeInterface";
 
 const ContainerNavbar = styled.nav`
 
@@ -11,7 +12,11 @@ const ContainerNavbar = styled.nav`
 
     position: fixed;
 
+    z-index: 2;
+
     width: 100%;
+
+    height: ${({ theme }:{ theme:Theme }) => (theme.navbarHeight)};
 
     padding: 1rem 2rem;
 
@@ -23,9 +28,6 @@ const ContainerNavbar = styled.nav`
     --webkit-backdrop-filter: blur(0.25rem);
 
     border: 0.0625rem solid rgba(255, 255, 255, 0.18);
-
-    z-index: 2;
-
 
 `;
 
