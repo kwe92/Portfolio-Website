@@ -1,4 +1,5 @@
 import styled, { createGlobalStyle, GlobalStyleComponent, DefaultTheme } from "styled-components";
+import { Theme } from "./interfaces/ThemeInterface";
 
 const AppGlobalTheme: GlobalStyleComponent<{}, DefaultTheme> = createGlobalStyle`
 

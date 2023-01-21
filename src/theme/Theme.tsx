@@ -19,7 +19,9 @@ const appTheme: Theme = {
     , brownColor: "#46364a"
 
     , whiteColor: "#ffffff"
+
+    , navbarHeight: "4rem"
   
-}
+};
 
 export default appTheme;

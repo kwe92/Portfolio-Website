@@ -1,9 +1,10 @@
 import React, { ReactElement } from "react";
 import Navbar from "./components/Navbar/Navbar";
-import { ThemeProvider } from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
 import AppWrapper from "./AppStyles";
 import { About, Footer, Header, Skills, Testimonial, Work } from "./container";
 import appTheme from "./theme/Theme";
+import { Theme } from "./interfaces/ThemeInterface";
 
 interface Props{
 
@@ -16,13 +17,14 @@ const App = (props:Props) => {
          <AppWrapper>
 
             <Navbar/>
-            {/* <Header />
-            <About />
-            <Work />
-            <Skills />
-            <Testimonial />
-            <Footer /> */}
-
+            <Wrapper>
+              <Header />
+              {/* <About />
+              <Work />
+              <Skills />
+              <Testimonial />
+              <Footer />  */}
+            </Wrapper>
           </AppWrapper>
 
       </ThemeProvider>
@@ -30,5 +32,9 @@ const App = (props:Props) => {
           
     );
 };
+
+const Wrapper = styled.div`
+  padding-top: ${({ theme }:{ theme: Theme }) => (theme.navbarHeight)};
+`;
 
 export default App;
