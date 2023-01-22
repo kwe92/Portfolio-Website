@@ -1,11 +1,8 @@
-import React, { useState, useEffect, SetStateAction  } from "react";
-import { motion } from "framer-motion";
+import React from "react";
 import { AboutContainer, AboutHeadText, AboutProfilesContainer, AboutProfileContainer } from "./AboutStyles";
-import { images } from "../../constants/images/index";
-import AboutInterface  from "../../interfaces/About";
 import useAbouts from "../../hooks/sanity_hooks/AboutsData";
 import { urlfor } from "../../client";
-import { SlowBuffer } from "buffer";
+import AppWrap from "../../wrapper/AppWrap";
 
 const About = () => {
 
@@ -53,4 +50,4 @@ className={"app__profile-item"}
   {props.children}
 </AboutProfileContainer>
 
-export default About;
+export default AppWrap(About, "about","");

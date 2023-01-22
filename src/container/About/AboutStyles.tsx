@@ -27,6 +27,8 @@ const AboutHeadText = styled.h2`
 const AboutContainer = styled(Column)`
     flex: 1;
 
+    height: 100vh;
+
     width: 100%;
 `;
 

@@ -1,7 +1,8 @@
 import React from "react";
-import { motion, TargetAndTransition, VariantLabels} from "framer-motion";
+import { TargetAndTransition } from "framer-motion";
 import { images } from "../../constants/images";
 import { HeaderContainer, HeaderInfo, HeaderBadgeContainer, IconNameContainer, IconHand, DescriptionContainer, CircleIconContainer, CircleIconBadge, CircleIconBadgeImage, ProfileImageContainer, OverlayCircle } from "./HeaderStyles";
+import AppWrap from "../../wrapper/AppWrap";
 
 const Header = () => {
 
@@ -59,4 +60,4 @@ const Header = () => {
     )
 }
 
-export default Header;
+export default AppWrap(Header, "home", "");

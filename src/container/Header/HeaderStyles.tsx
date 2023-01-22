@@ -13,7 +13,7 @@ const HeaderContainer = styled(Row)`
     width: 100%;
 
     // TODO: Maybe 100% ?
-    height: 100%;
+    height: 100vh;
 
     position: relative;
 

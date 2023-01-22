@@ -2,14 +2,13 @@ import React, { useState } from "react";
 import { images } from "../../constants/images";
 import {ContainerNavbar, LogoImageContainer, LogoImage, NavLinkUL, NavLinkListItem, NavLinkListItemWrapper, NavLinkListItemDot}from "./NavbarStyles";
 import { NavbarMobileMenu, HiMenu, Hi_X, FramerDiv, MobileNavLinkUL, MobileNavLinkListItem } from "./MobileLinksStyles";
-import { motion } from "framer-motion";
-
-interface Props {
+import linkText from "../../constants/data/LinkText";
+interface _Props {
 
 };
 
 
-const Navbar = (props:Props) => {
+const Navbar = (props:_Props) => {
 
   const [toggle, setToggle] = useState(false);
 
@@ -18,9 +17,6 @@ const Navbar = (props:Props) => {
   const handToggleOff = () => (setToggle(false));
 
   const handToggleBoth = () => (setToggle((prevState) => (!prevState)));
-
-
-  const linkText = ["home", "about", "work", "skills", "contact"];
 
 const navLinksItems = linkText.map((item) => 
   <NavLinkListItemWrapper key={`link-${item}`}>

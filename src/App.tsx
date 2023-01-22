@@ -1,5 +1,5 @@
 import React, { ReactElement } from "react";
-import Navbar from "./components/Navbar/Navbar";
+import { Navbar } from "./components";
 import styled, { ThemeProvider } from "styled-components";
 import AppWrapper from "./AppStyles";
 import { About, Footer, Header, Skills, Testimonial, Work } from "./container";
