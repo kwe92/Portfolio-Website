@@ -30,6 +30,8 @@ flex: 1;
 
 width: 100%;
 
+height: 100vh;
+
 flex-direction: column;
 
 padding: 4rem 2rem;
