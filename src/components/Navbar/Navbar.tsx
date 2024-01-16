@@ -3,12 +3,8 @@ import { images } from "../../constants/images";
 import {ContainerNavbar, LogoImageContainer, LogoImage, NavLinkUL, NavLinkListItem, NavLinkListItemWrapper, NavLinkListItemDot}from "./NavbarStyles";
 import { NavbarMobileMenu, HiMenu, Hi_X, FramerDiv, MobileNavLinkUL, MobileNavLinkListItem } from "./MobileLinksStyles";
 import linkText from "../../constants/data/LinkText";
-interface _Props {
 
-};
-
-
-const Navbar = (props:_Props) => {
+const Navbar = (props:{}) => {
 
   const [toggle, setToggle] = useState(false);
 
