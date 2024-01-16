@@ -1,11 +1,15 @@
 import React from "react";
-import { AboutContainer, AboutHeadText, AboutProfilesContainer, AboutProfileContainer } from "./AboutStyles";
+import {
+  AboutContainer,
+  AboutHeadText,
+  AboutProfilesContainer,
+  AboutProfileContainer,
+} from "./AboutStyles";
 import useAbouts from "../../hooks/sanity_hooks/AboutsData";
 import { urlfor } from "../../client";
 import AppWrap from "../../wrapper/AppWrap";
 
 const About = () => {
-
   // Custom Hook for API call
   const abouts = useAbouts();
 
@@ -16,38 +20,42 @@ const About = () => {
       <AboutHeadText>
         i know that
         <span> good design</span>
-        <br/>
+        <br />
         means
         <span> good business</span>
       </AboutHeadText>
 
       <AboutProfilesContainer className="app__profiles">
-        {abouts.map((about, index) =>{
-          
+        {abouts.map((about, index) => {
           const imageUrl = urlfor(about.imageUrl).url();
 
           return (
-              <AboutProfileContainer_ key={`about-${index}`}>
-
-                <img src={imageUrl} alt={about.title} />
-                <h2 className="bold-text" style={{marginTop: "20px"}}>{about.title}</h2>
-                <p className="bold-text" style={{marginTop: "10px"}}>{about.description}</p>
-                
-              </AboutProfileContainer_>
-          )
+            <AboutProfileContainer_ key={`about-${index}`}>
+              <img src={imageUrl} alt={about.title} />
+              <h2 className="bold-text" style={{ marginTop: "20px" }}>
+                {about.title}
+              </h2>
+              <p className="bold-text" style={{ marginTop: "10px" }}>
+                {about.description}
+              </p>
+            </AboutProfileContainer_>
+          );
         })}
       </AboutProfilesContainer>
     </AboutContainer>
   );
-}
+};
 
-const AboutProfileContainer_ = (props:{children: any, key: React.Key}) =>  <AboutProfileContainer key={props.key}
-whileInView={{ opacity: 1 } }
-whileHover={{ scale: 1.1}}
-transition={{duration: 0.5, type: "tween "}}
-className={"app__profile-item"}
->
-  {props.children}
-</AboutProfileContainer>
+const AboutProfileContainer_ = (props: { children: any; key: React.Key }) => (
+  <AboutProfileContainer
+    key={props.key}
+    whileInView={{ opacity: 1 }}
+    whileHover={{ scale: 1.1 }}
+    transition={{ duration: 0.5, type: "tween" }}
+    className={"app__profile-item"}
+  >
+    {props.children}
+  </AboutProfileContainer>
+);
 
-export default AppWrap(About, "about","");
+export default AppWrap(About, "about", "");
